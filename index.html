@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Divideyourself.com Brochure</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="app.js"></script>
+    <base href="/">
+  </head>
+  <body>
+    <div ng-controller="MainController">
+      <nav>
+        <a class="material-icons icon">panorama</a>
+        <a class="material-icons icon">map</a>
+        <a class="material-icons icon">mms</a>
+        <a class="material-icons icon">person</a>
+        <div class="user-nav" ng-click="navDropdown()">
+          <span>Ryan</span>
+          <i class="material-icons">{{state.dropdownIcon}}</i>
+        </div>
+      </nav>
+
+      <aside ng-if="state.navExpanded">
+        <img ng-src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/13902766_1720989764817768_677255066613358677_n.jpg?oh=f5124342191cf16369805601de8851b5&oe=584D3AFC"/>
+        <ul>Social Functionality :
+          <li>Profile</li>
+          <li>Friends</li>
+          <li>Tribes</li>
+          <li>Messaging</li>
+          <li>Trip Planning</li>
+          <li>Grabbing Post</li>
+        </ul>
+      </aside>
+
+      <main>
+        <header>
+          <img ng-src="https://s3-us-west-2.amazonaws.com/divideyourself.com/images/screenshot.jpg"/>
+        </header>
+          <article class="col-md-4">
+              <h3 class="title">Location Based</h3>
+              <ul>
+                <li>View popular posts near you</li>
+                <li>See your friends in real time</li>
+                <li>Explore distant locations for outdoor adventure </li>
+              </ul>
+          </article>
+            <article class="col-md-4">
+              <h3 class="title">Social</h3>
+              <ul>
+                <li>View and upvote top content</li>
+                <li>See sitewide popular posts or friends popular posts</li>
+                <li>Instant direct and group messaging</li>
+              </ul>
+            </article>
+            <article class="col-md-4">
+              <h3 class="title">Adventure Platform</h3>
+              <ul>
+                <li>Get inspired</li>
+                <li>Ask questions and grab reviews</li>
+                <li>Create and share trip itineraries with posts youve grabbed</li>
+              </ul>
+            </article>
+      </main>
+
+  </div>
+  </body>
+</html>
